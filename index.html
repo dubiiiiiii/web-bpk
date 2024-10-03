@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPK-X</title>
+    <!-- testing-cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="#">
+    <!-- leaflee js javascript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        // function bukaNavbar() {
+        //     const nav = document.getElementById("navbar");
+
+        //     if (nav.classList.contains('hidden')) {
+        //         nav.classList.remove('hidden');
+        //     } else {
+        //         nav.classList.add('gap-2', 'grid', 'bg-slate-200');
+        //     }
+        // }
+    </script>
+</head>
+
+<body class="bg-slate-800">
+    <!-- section-1 -->
+    <!-- navbar -->
+    <div class="z-10 justify-between items-center flex sticky top-0 p-2 bg-slate-800 text-white">
+        <div class="flex between gap-4 items-center font-bold">
+            <img src="src/ref/icon-web.png" alt="Balai Pelestarian Kebudayaan Wilayah X" class="xl:w-auto h-16">
+            <h3 class="hover:text-sky-400 cursor-default text-sm md:text-2xl">Balai Pelestarian Kebudayaan<br>Wilayah X
+            </h3>
+        </div>
+        <div class="p-2 hidden md:flex md:justify-between md:text-center font-bold not-italic" id="navbar">
+            <a href="#" class="p-2 m-2 hover:text-sky-400">Home</a>
+            <a href="#" class="p-2 m-2 hover:text-sky-400">Sejarah</a>
+            <a href="#" class="p-2 m-2 hover:text-sky-400">Koleksi</a>
+            <a href="#" class="p-2 m-2 hover:text-sky-400">Pelaporan</a>
+            <a href="login.html" class="p-2 m-2 text-white bg-sky-400 font-bold hover:bg-sky-500 rounded-md ">Login</a>
+        </div>
+        <a href="#" class="md:hidden w-6 h-6 hover:rotate delay-75 duration-75" onclick="bukaNavbar();"><img
+                src="src/icon/w/32.png" alt=""></a>
+    </div>
+    <img src="src/ref/bpk-x.jpg" class="bg-gray-500 h-full w-full bg-red-500">
+    <!-- picture -->
+    </div>
+    <!-- section peta-digital -->
+    <div class="px-4 md:px-2 bg-slate-800 py-4 md:py-10">
+        <h1 class="font-semibold text-white  text-center p-2 mb-4">PETA DIGITAL PENYEBARAN BENDA PURBAKALA</h1>
+        <div class="flex justify-center w-auto align-center">
+            <div id="map" class="z-0 h-96 rounded-md w-[1300px]">
+                <script>
+                    // import map
+                    var map = L.map('map').setView([-6.1959316026214015, 106.82641003858566], 13);
+                    // open-map
+                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19
+                    }).addTo(map);
+                    // marker-set-latitude-longitude
+                    var marker = L.marker([-6.1959316026214015, 106.82641003858566]);
+                    marker.addTo(map);
+                    marker.bindPopup('<div class="grid justify-center"><img src="src/icon/b/10.png" class="w-4 h-4"></img> <p>DISINI BAMBANG</p><button class="bg-sky-600 text-white rounded-md p-2 font-medium hover:bg-sky-700">VIEW MORE</button></div>');
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- section-2 -->
+    <div class="p-4 bg-white text-black">
+        <h3 class="text-center md:p-8 md:m-6 font-bold text-sky-400 hover:text-sky-500 text-xl cursor-default">Visi ,
+            Misi &
+            Tujuan</h3>
+        <div class="w-full justify-center flex flex-wrap md:grid md:grid-rows-2 md:grid-cols-2 gap-2">
+            <!-- bag-1 -->
+            <div class="">
+                <div
+                    class="p-2 bg-sky-400 hover:bg-sky-500 rounded-md text-white m-2 flex justify-center items-center font-bold">
+                    Visi
+                </div>
+                <div class="p-2 col-span-2 m-2 flex justify-center items-center font-semibold">Terwujudnya Pengelolaan
+                    dan
+                    Pelestarian Cagar
+                    Budaya secara Berkelanjutan untuk Memperkuat Karakter dan Jatidiri Bangsa.</div>
+            </div>
+            <!-- bag-2 -->
+            <div class="">
+                <div
+                    class="p-2 bg-sky-400 hover:bg-sky-500 rounded-md text-white m-2 justify-center flex items-center font-bold">
+                    Misi</div>
+                <ul class="list-disc list-inside p-2 m-2 font-semibold">
+                    <li>Meningkatkan Pelestarian Cagar Budaya.</li>
+                    <li>Meningkatkan Pengelolaan Cagar Budaya.</li>
+                    <li>Meningkatkan Inventarisasi Cagar Budaya.</li>
+                    <li>Meningkatkan Penyusunan Naskah Hasil Kajian Pelestarian Cagar Budaya.</li>
+                    <li>Meningkatkan Internalisasi Cagar Budaya.</li>
+                    <li>Meningkatkan Penyusunan Dokumen Pelestarian Cagar Budaya.</li>
+                    <li>Meningkatkan Tata Laksana Perkantoran dalam menunjang Pelestarian Cagar Budaya.</li>
+                </ul>
+            </div>
+            <div class="col-span-2 p-2">
+                <h3
+                    class="p-2 bg-sky-400 hover:bg-sky-500 rounded-md text-white m-2 justify-center flex items-center font-bold">
+                    Tujuan</h3>
+                <p class="p-2 font-semibold">Dengan mengacu pada “Visi” yang telah ditetapkan, maka Tujuan yang hendak
+                    dicapai atau
+                    dihasilkan oleh Balai Pelestarian Cagar Budaya Daerah Istimewa Yogyakarta adalah sebagai berikut:
+                </p>
+                <ul class="list-disc list-inside p-2 mx-2 font-semibold">
+                    <li>Meningkatkan Kelestarian Cagar Budaya dalam Kerangka Warisan Budaya Nasional dan Warisan Budaya
+                        Dunia.</li>
+                    <li>Meningkatkan Pemahaman Masyarakat tentang Cagar Budaya.</li>
+                    <li>Melakukan Pemugaran Bangunan Cagar Budaya. Meningkatkan Kualitas Sumber Daya Manusia dalam
+                        Pengelolaan dan Pelestarian Cagar Budaya.</li>
+                    <li>Mewujudkan Kemitraan dalam Pengelolaan dan Pelestarian Cagar Budaya.</li>
+                    <li>Menyusun Perencanaan Wilayah Makro Pelestarian Cagar Budaya.</li>
+                    <li>Mewujudkan Penyelamatan dan Pengamanan Cagar Budaya. Mewujudkan Pengembangan dan Pemanfaatan
+                        Cagar Budaya secara Berkelanjutan Berbasis Pelestarian.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- section-3 -->
+    <div class="w-full h-auto p-4 bg-slate-200 border-y">
+        <!-- text -->
+        <h3
+            class="text-center font-bold md:p-8 md:m-6 text-xl hover:text-slate-800 cursor-default underline underline-2 decoration-sky-500">
+            Koleksi Kami
+        </h3>
+        <!-- img-gallery -->
+        <div class="flex flex-wrap gap-2 justify-center my-4">
+            <img src="src/b-purba/1.png" alt="koleksi-1" class="rounded-xl w-fit-content">
+            <img src="src/b-purba/3.png" alt="koleksi-3" class="rounded-xl w-fit-content">
+            <img src="src/b-purba/2.png" alt="koleksi-2" class="rounded-xl w-fit-content">
+            <img src="src/b-purba/4.png" alt="koleksi-4" class="rounded-xl w-fit-content">
+            <img src="src/b-purba/5.png" alt="koleksi-5" class="rounded-xl w-fit-content">
+            <img src="src/b-purba/6.png" alt="koleksi-6" class="rounded-xl w-fit-content">
+            <img src="src/b-purba/7.png" alt="koleksi-7" class="rounded-xl w-fit-content">
+            <img src="src/b-purba/8.png" alt="koleksi-8" class="rounded-xl w-fit-content">
+            <img src="src/b-purba/9.png" alt="koleksi-9" class="rounded-xl w-fit-content">
+        </div>
+        <div class="flex justify-center">
+            <button class="p-2 m-2 rounded-md bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xl"><a
+                    href="#">See
+                    More</a></button>
+        </div>
+    </div>
+    <!-- section-4 -->
+    <div class="p-4 grid bg-white">
+        <!-- text -->
+        <h3 class="font-bold p m-6 text-center text-slate-800 hover:text-sky-500 text-xl cursor-default">Menemukan
+            Indikasi Benda
+            Purbakala??
+        </h3>
+        <!-- paragraf -->
+        <div class="my-2">
+            <p class="p-2 mb-4 font-semibold">Berikut alur pelaporan yang dapat kamu lakukan jika menemukan adanya
+                indikasi
+                benda purbakala ya! seperti berikut : </p>
+            <ul class="list-decimal list-bold list-inside mx-4">
+                <li>Wajib melakukan <a href="#" class="hover:text-sky-500"><b>Registrasi</b></a> akun kamu terlebih
+                    dahulu
+                    ya!
+                </li>
+                <li>Pastikan kamu gunakan data diri yang valid ya selama proses <a href="#"
+                        class="hover:text-sky-500"><b>Registrasi</b></a>, agar kami
+                    mudah menghubungi kamu!</li>
+                <li>Isikan data benda yang menjadi indikasi benda tersebut adalah benda purbakala ya! <b
+                        class="hover:text-red-500 cursor-default">WAJIB</b> secara
+                    lengkap ya!</li>
+                <li>Lalu, Laporan akan di proses oleh tim selama beberapa waktu nih.</li>
+                <li>Tinggal tunggu tim dari kami untuk memberikan informasi lebih lanjut ya terkait laporan kamu!.</li>
+                <li>Jika <b class="hover:text-green-500 cursor-default">BENAR</b> laporan yang diterima benar adanya
+                    merupakan benda
+                    purbakala dan sejenisnya? Tim kami
+                    akan
+                    secepat mungkin untuk memberikan informasi lanjutan terkait laporan ini kepada kamu!</li>
+                <li>Tim akan segera memberikan <b class="hover:text-green-500 cursor-default">KOMPENSASI</b> buat kamu
+                    nih,
+                    karena sudah melaporkan jika sudah menemukan
+                    adanya indikasi terkait benda purbakala. Bonus ini belaku jikalau; <i
+                        class="hover:border-b-2 hover:border-b-sky-500">Benda
+                        yang dilaporkan
+                        terkonfirmasi benar merupakan benda purbakala dan sejenisnya</i> ya!</li>
+            </ul>
+        </div>
+        <!-- btn-pelaporan -->
+        <div class="grid justify-center items-center p-2 m-2">
+            <a href="regis.html"
+                class="p-2 rounded-md bg-sky-500 hover:bg-sky-400 text-white hover:text-slate-800 text-center font-semibold text-xl">Ayo
+                Lapor!</a>
+        </div>
+    </div>
+
+    <!-- footer-section -->
+    <footer
+        class="md:p-4 bg-slate-800 text-white flex md:grid flex-wrap sm:grid-cols-3 md:gap-4 md:divide-x-4 md:divide-slate-100 justify-center">
+        <!-- nav-mini -->
+        <div class="col-span-2 p-2">
+            <h3 class="text-center p-2 font-semibold">Lokasi Balai Pelestarian Kebudayaan Wilayah X</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.3073839310146!2d110.47955627500467!3d-7.757187692261849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5afa51e6d7bf%3A0x41d91f62700a8f9c!2sBalai%20Pelestarian%20Kebudayaan%20Wilayah%20X!5e0!3m2!1sid!2sid!4v1719159912644!5m2!1sid!2sid"
+                width="" height="270" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
+        </div>
+        <!-- navbar-mini -->
+        <div class="p-2">
+            <h3 class="text-center md:p-4  font-semibold">Mini Navigasi</h3>
+            <div class="grid text-center items-center text-white">
+                <a href="#" class="p-4 hover:text-sky-500">Home</a>
+                <a href="#" class="p-4 hover:text-sky-500">Sejarah</a>
+                <a href="#" class="p-4 hover:text-sky-500">Koleksi</a>
+                <a href="#" class="p-4 hover:text-sky-500">Pelaporan</a>
+            </div>
+        </div>
+    </footer>
+    <p class="px-2 py-4 text-white bg-black text-center font-bold text-xs md:text-md">Reserved 2024 - Balai Pelestarian
+        Kebudayaan Wilayah X</p>
+</body>
+
+</html>
